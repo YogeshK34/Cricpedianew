@@ -1,10 +1,8 @@
 import { useRouter } from "next/router";
 import { PlayerCard } from "@/components/PlayerCard"; 
 import { PlayerImage } from "@/types/playerImage";
-import { ODIbattersImage } from "@/db/ODIBattersImage";
 import { Appbar } from "@/components/Appbar";
 import Footer from "@/components/Footer";
-import { T20BattersImage } from "@/db/T20battersImage";
 import { TestBattersImage } from "@/db/TestBattersImage";
 
 // const allPlayers: PlayerImage[] = [...T20BattersImage, ...TestBattersImage, ...ODIbattersImage];

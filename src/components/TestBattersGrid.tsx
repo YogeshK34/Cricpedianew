@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { ODIbatters } from "../db/ODIBatters";
 import React from 'react';
 import { Appbar } from "./Appbar";
 import { TestBatters } from "@/db/Testbatters";

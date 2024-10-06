@@ -1,8 +1,6 @@
 import { useRouter } from "next/router";
-import { ODIbatters } from "../db/ODIBatters";
 import React from 'react';
 import { Appbar } from "./Appbar";
-import { ODIBowlers } from "@/db/ODIBowlers";
 import { TestBowlers } from "@/db/TestBowlers";
 
 export const TestBowlersGrid = () => {

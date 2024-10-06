@@ -1,4 +1,3 @@
-import { Appbar } from "@/components/Appbar";
 import Footer from "@/components/Footer";
 import { ODIBattersGrid } from "@/components/ODIBattersGrid";
 

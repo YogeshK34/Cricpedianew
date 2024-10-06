@@ -13,7 +13,7 @@ const PlayerDetail = () => {
         return <div>Loading...</div>;
     }
 
-    const player: BowlertypeImage | undefined = ODIBowlersImage.find((batter : any) => batter.id === Number(id));
+    const player: BowlertypeImage | undefined = ODIBowlersImage.find((batter) => batter.id === Number(id));
 
     if (!player) {
         return <div>Player not found</div>;
