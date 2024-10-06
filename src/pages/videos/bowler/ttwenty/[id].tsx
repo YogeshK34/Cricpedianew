@@ -1,11 +1,7 @@
 import { useRouter } from "next/router";
-import { PlayerCard } from "@/components/PlayerCard"; 
-import { PlayerImage } from "@/types/playerImage";
-import { ODIbattersImage } from "@/db/ODIBattersImage";
 import { Appbar } from "@/components/Appbar";
 import Footer from "@/components/Footer";
 import { BowlerCard } from "@/components/BowlerCard";
-import { ODIBowlersImage } from "@/db/ODIBowlersImage";
 import { BowlertypeImage } from "@/types/BowlerImage";
 import { T20BowlersImage } from "@/db/T20BowlersImage";
 
