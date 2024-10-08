@@ -5,8 +5,11 @@ import { DropdownBowlers } from "./DropDownBolwers";
 import { Rankings } from "./Rankings";
 import { SearchBar } from "./SearchBar";
 
+// Define the type for the search term
+type SearchTerm = string; // Assuming the search term is a string
+
 export const Appbar = () => {
-  const handleSearch = (term: any) => {
+  const handleSearch = (term: SearchTerm) => {
     console.log('Search for:', term);
     // Implement your search logic here, e.g., filter a list, call an API, etc.
   };

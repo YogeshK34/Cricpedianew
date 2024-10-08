@@ -3,13 +3,17 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 export const DropdownBowlers = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const router = useRouter();
 
     const toggleDropdown = () => {
         setIsOpen(prev => !prev);
     };
 
-    const router = useRouter()
+    const navigateTo = (path: string) => {
+        router.push(path);
+        setIsOpen(false); // Close the dropdown after navigation
+    };
 
     return (
         <div className="relative inline-block text-left">
@@ -28,24 +32,24 @@ export const DropdownBowlers = () => {
                     <ul className="py-2 text-sm text-gray-700">
                         <li>
                             <button 
-                            className="fblock px-4 py-2 hover:bg-gray-100"
-                            onClick={()=> {
-                                router.push('/bowler/testbowler')
-                            }}>Top 10 Test bowlers</button>
+                                className="block px-4 py-2 hover:bg-gray-100"
+                                onClick={() => navigateTo('/bowler/testbowler')}>
+                                Top 10 Test Bowlers
+                            </button>
                         </li>
                         <li>
-                        <button 
-                            className="block px-4 py-2 hover:bg-gray-100"
-                            onClick={()=> {
-                                router.push('/bowler/odibowler')
-                            }}>Top 10 ODI bowlers</button>
+                            <button 
+                                className="block px-4 py-2 hover:bg-gray-100"
+                                onClick={() => navigateTo('/bowler/odibowler')}>
+                                Top 10 ODI Bowlers
+                            </button>
                         </li>
                         <li>
-                        <button 
-                            className="block px-4 py-2 hover:bg-gray-100"
-                            onClick={()=> {
-                                router.push('/bowler/t20bowler')
-                            }}>Top 10 T-20 bowlers</button>
+                            <button 
+                                className="block px-4 py-2 hover:bg-gray-100"
+                                onClick={() => navigateTo('/bowler/t20bowler')}>
+                                Top 10 T-20 Bowlers
+                            </button>
                         </li>
                     </ul>
                 </div>

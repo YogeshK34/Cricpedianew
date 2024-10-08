@@ -20,8 +20,8 @@ const PlayerDetail = () => {
     }
 
     return (
-        <div className="flex flex-col min-h-screen">
-            <div className="flex-grow mb-0">
+        <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-100 to-blue-200">
+            <div className="flex-grow mb-0 bg-gradient-to-b from-gray-100 to-blue-200">
                 <Appbar />
                 <BowlerCard player={player} />
             </div>

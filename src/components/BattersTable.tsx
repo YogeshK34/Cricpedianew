@@ -1,12 +1,30 @@
 import { ODIbatters } from "../db/ODIBatters";
 import { useRouter } from "next/router";
 
+// Define the type for each batter
+interface Batter {
+    id: number;
+    name: string;
+    matches: number;
+    innings: number;
+    runs: number;
+    highestScore: string;
+    average: number;
+    strikeRate: number;
+    centuries: number;
+    halfCenturies: number;
+    fours: number;
+    sixes: number;
+    wickets: number;
+}
+
 export const ODIbattersTable = () => {
     const router = useRouter();
 
     const handleVideoClick = (playerID: number) => {
         router.push(`/videos/${playerID}`);
     };
+
     return (
         <div>
             <div className="overflow-x-auto">
@@ -28,26 +46,25 @@ export const ODIbattersTable = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {ODIbatters.map((batter :  any) => (
-                            <tr key={batter?.id} className="bg-gray-50 text-black">
-                               <div
-                               key={batter?.id}
-                               onClick={()=> handleVideoClick(batter?.id)}
-                               className="cursor-pointer" 
-                               > 
-                                <td className="p-3 border border-gray-300">{batter?.name || 'Unknown'}</td>
-                                </div>
-                                <td className="p-3 border border-gray-300">{batter?.matches || 0}</td>
-                                <td className="p-3 border border-gray-300">{batter?.innings || 0}</td>
-                                <td className="p-3 border border-gray-300">{batter?.runs || 0}</td>
-                                <td className="p-3 border border-gray-300">{batter?.highestScore || 'N/A'}</td>
-                                <td className="p-3 border border-gray-300">{batter?.average || 0}</td>
-                                <td className="p-3 border border-gray-300">{batter?.strikeRate || 0}</td>
-                                <td className="p-3 border border-gray-300">{batter?.centuries || 0}</td>
-                                <td className="p-3 border border-gray-300">{batter?.halfCenturies || 0}</td>
-                                <td className="p-3 border border-gray-300">{batter?.fours || 0}</td>
-                                <td className="p-3 border border-gray-300">{batter?.sixes || 0}</td>
-                                <td className="p-3 border border-gray-300">{batter?.wickets || 0}</td>
+                        {ODIbatters.map((batter: Batter) => (
+                            <tr key={batter.id} className="bg-gray-50 text-black">
+                                <td 
+                                    onClick={() => handleVideoClick(batter.id)}
+                                    className="cursor-pointer p-3 border border-gray-300"
+                                >
+                                    {batter.name || 'Unknown'}
+                                </td>
+                                <td className="p-3 border border-gray-300">{batter.matches || 0}</td>
+                                <td className="p-3 border border-gray-300">{batter.innings || 0}</td>
+                                <td className="p-3 border border-gray-300">{batter.runs || 0}</td>
+                                <td className="p-3 border border-gray-300">{batter.highestScore || 'N/A'}</td>
+                                <td className="p-3 border border-gray-300">{batter.average || 0}</td>
+                                <td className="p-3 border border-gray-300">{batter.strikeRate || 0}</td>
+                                <td className="p-3 border border-gray-300">{batter.centuries || 0}</td>
+                                <td className="p-3 border border-gray-300">{batter.halfCenturies || 0}</td>
+                                <td className="p-3 border border-gray-300">{batter.fours || 0}</td>
+                                <td className="p-3 border border-gray-300">{batter.sixes || 0}</td>
+                                <td className="p-3 border border-gray-300">{batter.wickets || 0}</td>
                             </tr>
                         ))}
                     </tbody>
