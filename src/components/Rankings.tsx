@@ -31,21 +31,21 @@ export const Rankings = () => {
                             className="fblock px-4 py-2 hover:bg-gray-100"
                             onClick={()=> {
                                 router.push('/rankings/test')
-                            }}>Men's Test Team Ranking</button>
+                            }}>Mens Test Team Ranking</button>
                         </li>
                         <li>
                         <button 
                             className="block px-4 py-2 hover:bg-gray-100"
                             onClick={()=> {
                                 router.push('/rankings/odi')
-                            }}>Men's ODI Team Ranking</button>
+                            }}>Mens ODI Team Ranking</button>
                         </li>
                         <li>
                         <button 
                             className="block px-4 py-2 hover:bg-gray-100"
                             onClick={()=> {
                                 router.push('/rankings/t20')
-                            }}>Men's T20 Team Ranking</button>
+                            }}>Mens T20 Team Ranking</button>
                         </li>
                     </ul>
                 </div>

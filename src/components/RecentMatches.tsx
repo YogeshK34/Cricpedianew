@@ -1,4 +1,16 @@
-export default function RecentMatches({ tour, match, date, score1, score2, flag1, flag2 }: any) {
+import Image from "next/image";
+
+interface RecentMatchesProps {
+  tour: string;
+  match: string;
+  date: string;
+  score1: string;
+  score2: string;
+  flag1: string;
+  flag2: string;
+}
+
+export default function RecentMatches({ tour, match, date, score1, score2, flag1, flag2 }: RecentMatchesProps) {
     return (
       <div className="border rounded-lg p-4 max-w-sm shadow-lg bg-white transition-transform hover:scale-105 hover:shadow-xl">
         <div className="mt-2">
@@ -9,7 +21,10 @@ export default function RecentMatches({ tour, match, date, score1, score2, flag1
             {/* First team's score */}
             <div className="flex justify-between items-center mt-2">
               <div className="flex items-center space-x-2">
-                <img src={flag1} className="w-8 h-auto rounded-full shadow-md" alt="Team 1 Flag" />
+                <Image 
+                src={flag1} 
+                className="w-8 h-auto rounded-full shadow-md" 
+                alt="Team 1 Flag" />
                 <span className="text-sm font-medium text-gray-700">Team 1</span>
               </div>
               <div className="text-gray-400 p-2 text-sm font-semibold text-right bg-blue-100 border rounded-md w-32 shadow-sm">
@@ -20,7 +35,10 @@ export default function RecentMatches({ tour, match, date, score1, score2, flag1
             {/* Second team's score */}
             <div className="flex justify-between items-center mt-2">
               <div className="flex items-center space-x-2">
-                <img src={flag2} className="w-8 h-auto rounded-full shadow-md" alt="Team 2 Flag" />
+                <Image 
+                src={flag2} 
+                className="w-8 h-auto rounded-full shadow-md" 
+                alt="Team 2 Flag" />
                 <span className="text-sm font-medium text-gray-700">Team 2</span>
               </div>
               <div className="text-gray-400 p-2 text-sm font-semibold text-right bg-red-100 border rounded-md w-32 shadow-sm">
@@ -32,4 +50,3 @@ export default function RecentMatches({ tour, match, date, score1, score2, flag1
       </div>
     );
   }
-  

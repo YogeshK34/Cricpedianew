@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 
-export const SearchBar = ({ onSearch }: any) => {
-  const [searchTerm, setSearchTerm] = useState('');
+interface SearchBarProps {
+  onSearch: (searchTerm: string) => void;
+}
 
-  const handleSearch = (event : any) => {
+export const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState<string>('');
+
+  const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent form submission if the button is inside a form
     if (onSearch) {
       onSearch(searchTerm); // Call the parent function to handle the search
