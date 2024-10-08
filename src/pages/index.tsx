@@ -11,12 +11,12 @@ export default function Home() {
         <div className="min-w-[300px] min-h-[150px]">
           <RecentMatches
             tour={"Bangladesh tour of India"}
-            match={"2nd Test"}
+            match={"1st T20I"}
             flag1={"indianflag.png"}
             flag2={"banglaflag.png"}
-            score1={"285/9 d & 98/3 (17.2)"}
-            score2={"233 & 146 (47.0)"}
-            date={"Sep 27-Oct 1"}
+            score1={"132/3 (11.5)"}
+            score2={"127 (19.5)"}
+            date={"Oct 6"}
           />
         </div>
         <div className="min-w-[300px] min-h-[150px]">
@@ -40,17 +40,17 @@ export default function Home() {
             flag2={"banglaflag.png"}
             score1={"285/9 d & 98/3 (17.2)"}
             score2={"233 & 146 (47.0)"}
-            date={"Sep 27-Oct 1"}
+            date={"Sep 29"}
           />
         </div>
         <div className="min-w-[300px] min-h-[150px]">
           <RecentMatches
             tour={"Australia tour of England"}
-            match={"5th ODI"}
+            match={"4th ODI"}
             flag1={"englandflag.png"}
             flag2={"ausflag.png"}
-            score1={"309 (49.2)"}
-            score2={"165/2 (20.4)"}
+            score1={"312/5 (39.0)"}
+            score2={"126 (24.4)"}
             date={"Sep 27"}
           />
         </div>
